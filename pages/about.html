@@ -39,9 +39,9 @@
                     <li>
                         <a>More</a>
                         <ul class="p-2">
-                            <li><a href="./about.html">About</a></li>
+                            <li><a>About</a></li>
                             <li><a href="./contact.html">Contact</a></li>
-                            <li><a href="./reviews.html">Reviews</a></li>
+                            <li><a href="./price.html">Pricelist</a></li>
                             <li><a href="./events.html">Events</a></li>
                             <li><a href="./faqs.html">FAQs</a></li>
                         </ul>
@@ -50,7 +50,7 @@
             </div>
             <a class="text-black-custom font-montserrat btn btn-ghost text-xl border-none">DGBIMS</a>
         </div>
-        <div class="navbar-center hidden md:flex">
+        <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 flex gap-7">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./products.html">Products</a></li>
@@ -59,9 +59,9 @@
                     <details>
                     <summary>More</summary>
                     <ul class="p-2 w-30">
-                        <li><a href="./about.html">About</a></li>
+                        <li><a>About</a></li>
                         <li><a href="./contact.html">Contact</a></li>
-                        <li><a href="./reviews.html">Reviews</a></li>
+                        <li><a href="./price.html">Pricelist</a></li>
                         <li><a href="./events.html">Events</a></li>
                         <li><a href="./faqs.html">FAQs</a></li>
                     </ul>
@@ -70,91 +70,65 @@
             </ul>
         </div>
         <div class="navbar-end gap-4 mr-5 lg:mr-10">
-            <button class="btn btn-outline btn-primary" onclick="my_modal_5.showModal()">Register</button>
-            <dialog id="my_modal_5" class="modal modal-middle">
-                <div class="modal-box">
-                    <form method="dialog">
-                        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                    </form>
-                    <h3 class="text-lg font-bold text-center">REGISTER</h3>
-                    <p class="py-4">Press ESC key or click the button below to close</p>
-                    <div class="modal-action">
-                    <form method="dialog">
-                        <a class="btn btn-outline btn-primary">Register</a>
-                    </form>
-                    </div>
-                </div>
-            </dialog>
-            <a class="btn btn-primary">Login</a>
+
+            <button class="btn btn-outline btn-primary hidden lg:flex">Register</button>
+            <button class="btn btn-primary">Login</button>
+
         </div>
     </nav>
 
     <!-- BODY -->
 
-    <div class="h-screen flex justify-center items-center">
-        <h1 class="text-3xl lg:text-5xl text-black-custom font-montserrat">
-            WELCOME
-        </h1>
-    </div>
+    <section class="pt-50 h-screen flex items-center justify-center">
+        <div class="relative min-h-120 rounded-3xl mx-auto w-[96%] bg-black2-custom flex flex-col items-center text-center gap-6 p-8">
+            <div class="bg-gradient-to-br from-blue-400 to-blue-900 absolute w-60 aspect-square left-1/2 rounded-3xl -translate-x-1/2 -top-1/5 overflow-hidden flex justify-center items-center">
+                <img class="w-11/12 h-11/12 rounded-2xl object-cover" src="../images/logo.jpg" alt="logo">
+            </div>
+            <div class="flex flex-col items-center mt-35 gap-7 w-full">
+                <h1 class="font-montserrat text-white-custom text-3xl md:text-5xl">DGBIMS</h1>
+                <p class="text-white2-custom w-[85%] md:w-[50%]">
+                    We sell cars at an affordable price! We offer finance options to make sure that you get the best deal you can get without breaking the bank. Plus, we pride ourselves on offering exceptional customer service to ensure a smooth and hassle-free car buying experience.
+                </p>
+            </div>
+        </div>
+    </section>
 
-    <div class="bg-blue-100 h-screen flex justify-center items-center">
-        <h1 class="text-3xl lg:text-5xl text-black-custom font-montserrat">
-            LALALALALA
-        </h1>
+    <div class="my-40 mx-10 sm:mx-25 lg:mx-40 grid grid-cols-1 md:grid-cols-2 gap-15 gap-y-10 text-center">
+        <div class="flex flex-col items-center">
+            <h1 class="font-montserrat text-black-custom text-3xl md:text-5xl">MISSION</h1>
+            <p class="mt-5 text-sm/6 md:text-md max-w-md text-justify">
+                Our mission is to provide high-quality, pre-owned vehicles at competitive prices, making car ownership accessible and hassle-free. We strive to create a seamless buying experience through transparent transactions, excellent customer service, and flexible financing options. Our commitment is to build trust and long-lasting relationships with our customers, ensuring their satisfaction and confidence in every purchase.
+            </p>
+        </div>
+    
+        <div class="flex flex-col items-center">
+            <h1 class="font-montserrat text-black-custom text-3xl md:text-5xl">SERVICE</h1>
+            <p class="mt-5 text-sm/6 md:text-md max-w-md text-justify">
+                Buy with confidence! At DGBIMS Car Display, we take pride in providing reliable and quality pre-owned vehicles to our customers. We take pride in delivering exceptional customer service, ensuring that every customer can make informed decisions with peace of mind. Experience the difference with us, where trust and satisfaction drive our business.
+            </p>
+        </div>
     </div>
-    <div class="bg-red-100 h-screen flex justify-center items-center">
-        <h1 class="text-3xl lg:text-5xl text-black-custom font-montserrat">
-            RARARARARA
-        </h1>
-    </div>
-    <div class="bg-yellow-100 h-screen flex justify-center items-center">
-        <h1 class="text-3xl lg:text-5xl text-black-custom font-montserrat">
-            DAWHDBAHWDBAW
-        </h1>
-    </div>
-
-
     <!-- END OF BODY -->
 
-    <footer class="footer sm:footer-horizontal bg-white-custom text-base-content p-10">
-        <aside class="sm:mx-auto">
-          <svg
-            width="50"
-            height="50"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            class="fill-current">
-            <path
-              d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
-          </svg>
-          <p>
-            ACME Industries Ltd.
-            <br />
-            Providing reliable tech since 1992
-          </p>
+    <footer class="bg-white-custom text-base-content p-10 flex flex-col xl:flex-row items-center sm:justify-between text-center xl:text-left">
+        <aside>
+            <p class="font-bold">
+                DGBIMS Car Display  
+                <br />
+            </p>
+            Providing reliable automotives since 2018
         </aside>
-        <div>
-          <h6 class="footer-title">Services</h6>
-          <a class="link link-hover">Branding</a>
-          <a class="link link-hover">Design</a>
-          <a class="link link-hover">Marketing</a>
-          <a class="link link-hover">Advertisement</a>
+        <div class="flex flex-col mt-20 xl:mt-0 md:flex-row justify-center sm:justify-start gap-2 sm:gap-4">
+            <h6 class="footer-title">Developers:</h6>
+            <a class="link link-hover">Daleon, Ryan Matthew</a>
+            <span class="hidden md:inline">|</span>
+            <a class="link link-hover">Espia, Alexander Jann</a>
+            <span class="hidden md:inline">|</span>
+            <a class="link link-hover">Flora, Jabez</a>
+            <span class="hidden md:inline">|</span>
+            <a class="link link-hover">Tambo, Justine</a>
         </div>
-        <div>
-          <h6 class="footer-title">Company</h6>
-          <a class="link link-hover">About us</a>
-          <a class="link link-hover">Contact</a>
-          <a class="link link-hover">Jobs</a>
-          <a class="link link-hover">Press kit</a>
-        </div>
-        <div>
-          <h6 class="footer-title">Legal</h6>
-          <a class="link link-hover">Terms of use</a>
-          <a class="link link-hover">Privacy policy</a>
-          <a class="link link-hover">Cookie policy</a>
-        </div>
+        
     </footer>
 
     <script src="../scripts/dropDown.js"></script>
