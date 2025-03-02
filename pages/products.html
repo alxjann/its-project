@@ -21,6 +21,7 @@
             --font-montserrat: "Montserrat", Arial, Helvetica, sans-serif;
         }
     </style>
+
 </head>
 
 <body>
@@ -50,7 +51,7 @@
             </div>
             <a class="text-black-custom font-montserrat btn btn-ghost text-xl border-none">DGBIMS</a>
         </div>
-        <div class="navbar-center hidden md:flex">
+        <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 flex gap-7">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./products.html">Products</a></li>
@@ -70,7 +71,7 @@
             </ul>
         </div>
         <div class="navbar-end gap-4 mr-5 lg:mr-10">
-            <button class="btn btn-outline btn-primary" onclick="my_modal_5.showModal()">Register</button>
+            <button class="btn btn-outline btn-primary hidden sm:flex" onclick="my_modal_5.showModal()">Register</button>
             <dialog id="my_modal_5" class="modal modal-middle">
                 <div class="modal-box">
                     <form method="dialog">
@@ -85,38 +86,51 @@
                     </div>
                 </div>
             </dialog>
-            <a class="btn btn-primary">Login</a>
+
+            <button class="btn btn-primary">Login</button>
+
         </div>
     </nav>
 
     <!-- BODY -->
 
-    <div class="h-screen flex justify-center items-center">
-        <h1 class="text-3xl lg:text-5xl text-black-custom font-montserrat">
-            WELCOME
-        </h1>
-    </div>
+    <div class="min-h-screen flex justify-center">
+        <div class="max-sm:w-[90%] w-[80%] mx-auto">
+            <div class="md:ml-15 md:mr-12">
+                <div class="flex max-sm:flex-col-reverse justify-between items-center mt-50 mb-4 ">
+                    <h2 id="result" class="text-lg font-sans max-sm:my-5 text-black-custom max-md:text-sm">Showing 1–12  of 19 result</h2>
+                    <select class="select select-info max-sm:w-full max-md:w-[30%] lg:w-[15%]">
+                        <option disabled selected>Sort By</option>
+                        <option>Latest</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                    </select>
+                </div>
+     
+                <div class="grid gap-5 md:gap-10 auto-cols-fr grid-cols-1 sm:grid-cols-2 md:grid-cols-3" id="productList"></div>
 
-    <div class="bg-blue-100 h-screen flex justify-center items-center">
-        <h1 class="text-3xl lg:text-5xl text-black-custom font-montserrat">
-            LALALALALA
-        </h1>
+                <br><br><br>
+                <div class="join mt-5 flex justify-center md:justify-start" id="pagination"></div>
+
+            </div>
+
+
+
+            <br>
+            <br>
+            <br><br><br><br><br><br><br>
+            <!--<div id="productList" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 place-items-center"></div>-->
+
+        </div>
     </div>
-    <div class="bg-red-100 h-screen flex justify-center items-center">
-        <h1 class="text-3xl lg:text-5xl text-black-custom font-montserrat">
-            RARARARARA
-        </h1>
-    </div>
-    <div class="bg-yellow-100 h-screen flex justify-center items-center">
-        <h1 class="text-3xl lg:text-5xl text-black-custom font-montserrat">
-            DAWHDBAHWDBAW
-        </h1>
-    </div>
+    
+    
+ 
 
 
     <!-- END OF BODY -->
 
-    <footer class="footer sm:footer-horizontal bg-white-custom text-base-content p-10">
+    <footer class="footer sm:footer-horizontal bg-white-custom text-base-content mt-20 p-10">
         <aside class="sm:mx-auto">
           <svg
             width="50"
@@ -160,6 +174,7 @@
     <script src="../scripts/dropDown.js"></script>
     <script src="../scripts/navBarScroll.js"></script>
     <script src="../scripts/loader.js"></script>
+    <script src="../scripts/productList.js"></script>
 </body>
 
 </html>
