@@ -22,7 +22,23 @@ const cars = [
 
 const carsPerPage = 12;
 let currentPage = 0;
+let sortedCars = [...cars];
 const totalPages = Math.ceil(cars.length / carsPerPage);
+
+document.querySelector(".select").addEventListener("change", (event) => {
+    const sortBy = event.target.value;
+    
+    if (sortBy === "latest") {
+        sortedCars = [...cars];
+    } else if (sortBy === "priceAsc") {
+        sortedCars.sort((a, b) => a.price - b.price);
+    } else if (sortBy === "priceDesc") {
+        sortedCars.sort((a, b) => b.price - a.price);
+    }
+    
+    currentPage = 0;
+    displayCars();
+});
 
 function displayCars() {
     const productList = document.getElementById("productList");
@@ -30,12 +46,11 @@ function displayCars() {
 
     const start = currentPage * carsPerPage;
     const end = start + carsPerPage;
-    const carsToShow = cars.slice(start, end);
+    const carsToShow = sortedCars.slice(start, end);
 
     carsToShow.forEach(car => {
         const carElement = document.createElement("div");
         carElement.classList.add("card", "bg-base-100", "shadow-sm");
-
         carElement.innerHTML = `
             <figure class="px-3 pt-3 aspect-4/3 overflow-hidden">
                 <img src="${car.image}" alt="${car.name}" class="rounded-lg w-full h-full object-cover" />
@@ -45,7 +60,7 @@ function displayCars() {
                 <p>₱${car.price.toLocaleString()}</p>
                 <br>
                 <div class="card-actions">
-                    <button href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-blue-custom rounded-lg shadow-md group cursor-pointer">
+                    <button class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-blue-custom rounded-lg shadow-md group cursor-pointer">
                         <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-custom group-hover:translate-x-0 ease">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -57,30 +72,29 @@ function displayCars() {
                 </div>
             </div>
         `;
-
         productList.appendChild(carElement);
     });
     updatePagination();
-    document.getElementById("result").textContent = `Showing ${start + 1}–${Math.min(end, cars.length)} of ${cars.length} results`;
+    document.getElementById("result").textContent = `Showing ${start + 1}–${Math.min(end, sortedCars.length)} of ${sortedCars.length} results`;
 }
 
 function updatePagination() {
-    const pagination = document.getElementById("pagination");
-    pagination.innerHTML = "";
+    const tabList = document.getElementById("tabList");
+    tabList.innerHTML = "";
 
     for (let i = 0; i < totalPages; i++) {
-        const pageBtn = document.createElement("button");
-        pageBtn.classList.add("join-item", "btn");
+        const tab = document.createElement("a");
+        tab.classList.add("tab");
         if (i === currentPage) {
-            pageBtn.classList.add("btn-active");
+            tab.classList.add("tab-active");
         }
-        pageBtn.textContent = i + 1;
-        pageBtn.onclick = () => {
+        tab.textContent = `Page ${i + 1}`;
+        tab.onclick = () => {
             currentPage = i;
             displayCars();
-            window.scrollTo({ top: 0, behavior: "smooth" });            
+            setupTabs();
         };
-        pagination.appendChild(pageBtn);
+        tabList.appendChild(tab);
     }
 }
 

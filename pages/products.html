@@ -101,11 +101,14 @@
                     <h2 id="result" class="text-lg font-sans max-sm:my-5 text-black-custom max-md:text-sm">Showing 1–12  of 19 result</h2>
                     <select class="select select-info max-sm:w-full max-md:w-[30%] lg:w-[15%]">
                         <option disabled selected>Sort By</option>
-                        <option>Latest</option>
-                        <option>Price: Low to High</option>
-                        <option>Price: High to Low</option>
+                        <option value="latest">Latest</option>
+                        <option value="priceAsc">Price: Low to High</option>
+                        <option value="priceDesc">Price: High to Low</option>
                     </select>
                 </div>
+                
+                <div role="tablist" class="tabs tabs-border" id="tabList"></div>
+
      
                 <div class="grid gap-5 md:gap-10 auto-cols-fr grid-cols-1 sm:grid-cols-2 md:grid-cols-3" id="productList"></div>
 
