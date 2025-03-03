@@ -27,7 +27,7 @@
     <nav class="navbar max-w-[90%] sm:max-w-[80%] h-20 my-8 rounded-2xl fixed left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300">        
         <div class="navbar-start max-sm:-ml-5 lg:ml-5">
             <div class="dropdown ml-2">
-                <div tabIndex="0" role="button" class="btn btn-ghost md:hidden">
+                <div tabIndex="0" role="button" class="btn btn-ghost lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                 </div>
                 <ul
@@ -79,32 +79,56 @@
 
     <!-- BODY -->
 
-    <div class="h-screen flex justify-center items-center">
-        <h1 class="text-3xl lg:text-5xl text-black-custom font-montserrat">
-            WELCOME
-        </h1>
-    </div>
+    <section class="w-full min-h-screen text-center pt-40">
+        <h1 class="font-montserrat text-3xl font-bold">Events</h1>
+        <p class="mt-5 text-black-custom mx-5 sm:mx-20 md:mx-25 lg:mx-40 text-center">
+            Depending on the time of the year, we have different events such as different sales throughout different seasons and more!
+        </p>
+    
+        <div class=" place-items-center mt-20 mx-5 sm:mx-20 md:mx-25 lg:mx-40 max-w-[90%] sm:max-w-[80%] grid auto-cols-fr grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="card w-full shadow-lg rounded-md bg-white flex flex-col h-full">
+                <figure>
+                    <img src="../images/summer.png" alt="Summer Sale" class="w-full h-auto" />
+                </figure>
+                <div class="card-body flex-grow p-5 text-left">
+                    <h2 class="card-title font-bold text-lg">Summer Heat Car Sale</h2>
+                    <p>Beat the heat with great vehicles equipped with the best air conditioning!</p>
+                </div>
+            </div>
+        
+            <div class="card w-full shadow-lg rounded-md bg-white flex flex-col h-full">
+                <figure>
+                    <img src="../images/electric.png" alt="Electric Car Sale" class="w-full h-auto" />
+                </figure>
+                <div class="card-body flex-grow p-5 text-left">
+                    <h2 class="card-title font-bold text-lg">Electrifying Deals Car Sale</h2>
+                    <p>Explore electrifying deals on our top-of-the-line EVs!</p>
+                </div>
+            </div>
+        
+            <div class="card w-full shadow-lg rounded-md bg-white flex flex-col h-full">
+                <figure>
+                    <img src="../images/usedcar.jpg" alt="Used Car Sale" class="w-full h-auto" />
+                </figure>
+                <div class="card-body flex-grow p-5 text-left">
+                    <h2 class="card-title font-bold text-lg">Winter Driver Car Sale</h2>
+                    <p>Explore our reliable lineup fit for your winter getaways!</p>
+                </div>
+            </div>
+        </div>
 
-    <div class="bg-blue-100 h-screen flex justify-center items-center">
-        <h1 class="text-3xl lg:text-5xl text-black-custom font-montserrat">
-            LALALALALA
-        </h1>
-    </div>
-    <div class="bg-red-100 h-screen flex justify-center items-center">
-        <h1 class="text-3xl lg:text-5xl text-black-custom font-montserrat">
-            RARARARARA
-        </h1>
-    </div>
-    <div class="bg-yellow-100 h-screen flex justify-center items-center">
-        <h1 class="text-3xl lg:text-5xl text-black-custom font-montserrat">
-            DAWHDBAHWDBAW
-        </h1>
-    </div>
+        <div class="text-center mt-15">
+            <h1 class="text-black-custom text-md md:text-xl">And More To Come...</h1>
+        </div>
+    </section>
+    
+    
+    
 
 
     <!-- END OF BODY -->
 
-    <footer class="bg-white-custom text-base-content p-10 flex flex-col xl:flex-row items-center sm:justify-between text-center xl:text-left">
+    <footer class="bg-white-custom text-base-content mt-10 p-10 flex flex-col xl:flex-row items-center sm:justify-between text-center xl:text-left">
         <aside>
             <p class="font-bold">
                 DGBIMS Car Display  
