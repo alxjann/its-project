@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Montserrat:wght@700&display=swap");
 
-
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
